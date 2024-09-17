@@ -1,0 +1,615 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    position: relative;
+    font-family: font1;
+}
+@font-face {
+    font-family: font1;
+    src: url(font1.ttf);
+}
+@font-face{
+    font-family: font2;
+    src: url(font2.ttf);
+}
+@font-face {
+    font-family: font3;
+    src: url(font3.ttf);
+}
+.home{
+    width: 100%;
+    height: 83vh;
+    position: relative;
+}
+.home nav{
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.7vw 3vw;
+}
+.sideMenu{
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    right: -100%;
+    padding: 3vw 5vw;
+    z-index: 10;
+    background-color: white;
+    font-family: font1;
+    
+}
+.navL, .navR{
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    margin-top: 10vw;
+    color: black;
+}
+.lTop, .rTop{
+    font-size: 1.2vw;
+    color: rgba(26, 26, 26, 0.549);
+}
+.social{
+    width: 4vw;
+    height: 1.1vw;
+    position: relative;
+    overflow: hidden;
+}
+.lBottom .socialHov{
+    position: absolute;
+    transition: all ease .3s;
+}
+.lBottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.lBottom h6{
+    font-size: .9vw;
+    font-weight: 100;
+    top: 0%;
+    left: 0;
+    cursor: pointer;
+}
+.lBottom .social:hover .socialHov{
+    transform: translateY(-50%);
+}
+.navR .rBottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+nav img{
+    width: 100px;
+}
+nav h1{
+    font-size: 1.1vw;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+.menuBtn{
+    width: 2vw;
+    height: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5vw;
+    z-index: 100;
+    position: fixed;
+    right: 2vw;
+    top: 2.5vw;
+}
+.rElem h5{
+    font-size: 3vw;
+    font-weight: 100;
+}
+.rElem{
+    overflow: hidden;
+    width: 17vw;
+    height: 3.2vw;
+    position: relative;
+    cursor: pointer;
+}
+.rElem .elemHov{
+    position: absolute;
+    transition: all ease .3s;
+}
+.rElem:hover .elemHov{
+    transform: translateY(-50%);
+}
+.line{
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    mix-blend-mode: color;
+}
+.homeContent{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 0 7vw;
+}
+
+.boxH h1 .s1{
+    display: inline-block;
+}
+.boxH{
+    width: 58%;
+    text-align: end;
+    position: relative;
+}
+.boxH::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.boxH h1{
+    font-size: 7vw;
+    font-weight: 100;
+    overflow-y: hidden;
+}
+.boxH h1 .italic{
+    font-style: italic;
+}
+.circleH{
+    width: 12vw;
+    height: 8vw;
+    position: absolute;
+    top: 8vw;
+    left: 2vw;
+    border-radius: 15vw;
+    overflow: hidden;
+    transform: scale(1);
+}
+.circleH video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.customCursor{
+    width: .8vw;
+    height: .8vw;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 20;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .18vw;
+    font-family: font1;
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.page1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.page2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+}
+.left2 video{
+    width: 33vw;
+    height: 33vw;
+    object-fit: cover;
+}
+.right2{
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+}
+.right2 h1{
+    font-size: 2.3vw;
+    font-weight: 100;
+}
+.right2 button {
+    width: 28vw;
+    height: 13vw;
+    border: 2px solid black;
+    border-radius: 15vw;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.aTag{
+    width: 20vw;
+    height: 1.65vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right2 button a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.7vw;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    transition: all ease .4s;
+}
+.right2 button::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: black;
+    border-radius: 50%;
+    transition: all ease .3s;
+}
+.right2 button:hover::before{
+    top: 0;
+    border-radius: 0;
+}
+.right2 button:hover .aTag a{
+    top: -120%;
+    color: white;
+    z-index: 10;
+}
+.page3{
+    width: 100%;
+    background-color: #161616;
+    border-top-left-radius: 6vw;
+    border-top-right-radius: 6vw;
+    padding-bottom: 16vw;
+}
+.top3{
+    padding: 10vw 6vw;
+    color: white;
+}
+.top3 h1{
+    font-size: 10vw;
+    font-weight: 100;
+}
+.botm3{
+    width: 53vw;
+    text-align: end;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1vw;
+}
+.circle3{
+    width: 15vw;
+    height: 10vw;
+    border-radius: 10vw;
+    overflow: hidden;
+}
+.circle3 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bottom3{
+    width: 100%;
+    display: flex;
+    padding: 2vw 8vw;
+    gap: 5vw;
+}
+.box3{
+    width: 31vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    color: white;
+    cursor: pointer;
+}
+.box3 video{
+    width: 100%;
+    border-radius: 2vw;
+    transition: all ease .4s;
+}
+.box3 h1{
+    font-weight: 100;
+    font-size: 1.5vw;
+}
+.column1, .column2{
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+}
+.column2{
+    padding-top: 22vw;
+}
+
+.page4{
+    width: 100%;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+    background-color: white;
+    margin-top: -5vw;
+    padding-bottom: 10vw;
+}
+.top4{
+    padding: 0vw 10vw;
+    padding-top: 10vw;
+}
+.top4 h1{
+    font-size: 11vw;
+    line-height: 10vw;
+    font-weight: 100;
+    position: relative;
+    overflow-y: hidden;
+    height: 11vw;
+}
+.top4 h1 .italic{
+    font-style: italic;
+}
+.s2{
+    display: inline-block;
+}
+.bottom4{
+    display: flex;
+    width: 100%;
+    padding: 0vw 12vw;
+    gap: 2vw;
+    align-items: center;
+    margin-top: 10vw;
+}
+
+.bRight4{
+    width: 40%;
+}
+.bRight4 p{
+    font-size: 1.5vw;
+    font-weight: 900;
+}
+
+.page5{
+    width: 100%;
+    background-color: #161616;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+    padding-bottom: 35vw;
+    position: relative;
+}
+.top5{
+    padding: 10vw 10vw;
+    color: white;
+}
+.top5 h1{
+    font-size: 8vw;
+    font-weight: 100;
+    line-height: 7vw;
+    position: relative;
+}
+
+.top5 h1 .italic{
+    font-style: italic;
+    font-size: 8.6vw;
+}
+.top5 h1 .c{
+    display: inline-block;
+}
+.bottom5{
+    color: white;
+    width: 100%;
+    padding-left: 10vw;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.bottom5::-webkit-scrollbar{
+    display: none;
+}
+.box5{
+    width: 33vw;
+    display: inline-block;
+    margin-right: 2vw;
+    transition: all ease .4s;
+    cursor: pointer;
+}
+.box5:hover{
+    transform: scale(.98);
+}
+.box5 img{
+    width: 100%;
+    border-radius: 2vw;
+}
+.box5 h4{
+    font-size: 1.2vw;
+    font-weight: 100;
+    margin-top: 2vw;
+}
+.bot5{
+    position: absolute;
+    color: white;
+    right: 20vw;
+    bottom: 10vw;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.bot5 p{
+    font-size: 1.5vw;
+}
+.btn5{
+    width: 18vw;
+    height: 1.3vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;   
+    cursor: pointer;
+}
+.bot5 h5{
+    font-size: 1.1vw;
+    font-weight: 800;
+    z-index: 10;
+}
+.botH{
+    position: absolute;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    transition: all ease .5s;
+}
+.btn5Hov:hover .botH{
+    transform: translateY(-60%);
+    color: black;
+}
+.btn5Hov{
+    width: 18vw;
+    height: 3.3vw;
+    border-radius: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid white;
+}
+.btn5Hov::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    top: 100%;
+    left: 0;
+    transition: all ease .5s;
+}
+.btn5Hov:hover::before{
+    top: 0;
+    border-radius: 0;
+}
+
+.page6{
+    width: 100%;
+    position: relative;
+    background-color: white;
+}
+.top6{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10vw 0vw;
+    overflow: hidden;
+    gap: 3vw;
+    position: relative;
+}
+.top6::-webkit-scrollbar{
+    display: none;
+}
+.b6{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    flex-shrink: 0;
+    transform: translateX(-100%);
+}
+.b6 h1{
+    font-size: 11vw;
+    font-weight: 100;
+}
+.b6 h1 span{
+    font-style: italic;
+}
+.b6 .circle6{
+    width: 18vw;
+    height: 11vw;
+    border-radius: 5vw;
+    overflow: hidden;
+}
+.circle6 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bottom6{
+    width: 100%;
+    padding: 4vw 0vw;
+    display: flex;
+    gap: 3vw;
+    overflow: auto;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 10vw;
+    padding-bottom: 10vw;
+}
+
+.bottom6::-webkit-scrollbar{
+    display: none;
+}
+.boxC6{
+    width: 25vw;
+    height: 20vw;
+    overflow: hidden;
+    border-radius: 1.5vw;
+    display: flex;
+    align-items: center;
+}
+.box6{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    flex-shrink: 0;
+}
+.top6::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.boxC6 img{
+    width: 100%;
+    object-fit: cover;
+}
+.box6 h6{
+    font-size: 1.3vw;
+}
